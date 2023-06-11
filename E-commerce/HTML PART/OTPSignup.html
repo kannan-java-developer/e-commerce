@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            background-color: rgb(250, 249, 246);
+        }
+        .container{
+            width: 300px;
+        }
+        .head{
+            display: grid;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        #heading{
+            text-align: center;
+            color: rgb(86, 85, 85);
+            font-family:serif;
+        }
+        .fa-solid{
+            position: absolute;
+            margin-left: -150px;
+            font-size: 30px;
+            color:rgb(255, 115, 0);
+        }
+        #heading span{
+            color: rgb(255, 115, 0); 
+            font-size: 35px;
+        }
+        .container{
+            border: 1px rgb(197, 196, 196) solid;
+            border-radius: 10px;
+            width: 250px;
+            margin-left: -45px;
+            padding-left: 20px;
+            padding-right: 10px;
+        }
+        .heading{
+            font-size: 15px;
+            font-weight:550;
+            margin-top: 20px;
+        }
+        .sub-head{
+            font-size: 10px;
+            margin-top: 15px;
+        }
+        .enterotp{
+            font-size: 9px;
+            font-weight: 600;
+            margin-top: 20px;
+            margin-left: 3px;
+            margin-bottom: 2px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #otp-number input{
+            outline:none;
+            font-size: 10px;
+            width: 238px;
+            height: 15px;
+            padding: 3px 0px;
+            padding-left: 5px;
+            border-radius: 3px;
+            border: 1px solid rgb(161, 160, 160);
+            border-radius: 5px;
+        }
+        .button input{
+            width: 244px;
+            border-radius: 3px;
+            border: 1px solid rgb(255, 115, 0);
+            font-size: 9px;
+            padding: 3px 0px;
+            margin-top: 20px;
+            background-color: rgb(255, 115, 0);
+            color: rgb(250, 249, 246);
+        }
+        .resend{
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .resend a{
+            text-decoration: none;
+            font-size: 10px;
+        }
+        #otp-number input:hover{
+            border: 1px rgb(255, 115, 0) solid;
+            box-shadow: 0px 0px 5px rgb(254, 52, 12);
+            transition:0.3s;
+        }
+        .resend:hover a{
+            text-decoration: underline;
+            color: rgb(255, 115, 0);
+        }
+        .button input:hover{
+            background-color: transparent;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="head">
+        <div id="heading"><i class="fa-solid fa-truck-fast"></i><h1><span>K</span>acha Mart</h1></div> 
+        <div class="container">
+        <div class="heading">Verification required</div>
+        <div class="sub-head">To continue, complete this verification step. We've sent an OTP to the mobile number +91xxxxxxxxxx. Please enter it below to complete verification.</div>
+        <form action="./index.html">
+        <div class="enterotp"><label for="">Enter OTP</label> </div>
+        <div id="otp-number"><input type="number" placeholder="OTP"></div>
+        <div class="button"><input type="submit"></div>
+        <div class="resend"><a href="#">Resend OTP</a></div>
+    </div>
+    </div>
+    
+</form>
+</body>
+</html>

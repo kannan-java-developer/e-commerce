@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            background-color: rgb(250, 249, 246);
+        }
+        .container{
+            width: 300px;
+        }
+        .head{
+            display: grid;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        #heading{
+            text-align: center;
+            color: rgb(86, 85, 85);
+            font-family:serif;
+            margin-left: -1px;
+        }
+        .fa-solid{
+            position: absolute;
+            margin-left: -130px;
+            font-size: 30px;
+            color:rgb(255, 115, 0);
+        }
+        #heading span{
+            color: rgb(255, 115, 0); 
+            font-size: 35px;
+        }
+        #sub-heading p{
+            font-size: 12px;
+            color: rgb(146, 145, 145);
+            margin-top: 30px;
+            margin-bottom: 10px;
+            margin-left: -20px;
+        }
+        input{
+            width: 80%;
+            height: 30px;
+            outline: none;
+            border: 1px solid rgb(161, 160, 160);
+            border-radius: 5px;
+            background-color: rgb(244, 240, 240);
+            margin-bottom: 10px;
+            margin-left: 15px;
+            padding: 0px 12px;
+        }
+        #sign-in1{
+            margin-top: 10px;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(0, 89, 255);
+            font-size: 11px;
+        }
+        #for-pass{
+            display: flex;
+            justify-content: end;
+            margin-right: 20px;
+        }
+        #login a button{
+            width: 88%;
+            background-color: rgb(255, 115, 0);
+            border: 1px solid rgb(255, 115, 0);
+            padding: 5px 10px;
+            color: rgb(250, 249, 246);
+            margin-top: 10px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-left: 15px;
+        }
+        .border{
+            border: 1px rgb(197, 196, 196) solid;
+            width: 100%;
+            border-radius: 10px;
+            margin-left: -20px;
+            
+        }
+        #signup{
+            margin-left: 15px;
+            margin-top: 25px;
+        }
+        #line{
+            position: relative;
+            top: 20px;
+            border-bottom: 1px rgb(146, 145, 145) solid;
+            left: -20px;
+        }
+        #new-user{
+            font-size: 10px;
+            position: relative;
+            display: inline-block;
+            top: 4px;
+            left: 90px;
+            background-color: rgb(250, 249, 246);
+            color: rgb(146, 145, 145);
+        }
+        #new-button button{
+            width: 100%;
+            font-size: 10px;
+            border: 1px solid grey; 
+            border-radius: 2px;
+            padding: 4px 0px; 
+        }
+        #new-button{    
+            margin-left: -20px;
+            width: 100%;
+            margin-top: 7px;
+        }
+        input:hover{
+            border: 1px rgb(255, 115, 0) solid;
+            box-shadow: 0px 0px 5px rgb(254, 52, 12);
+            transition:0.3s;
+        }
+        #login a button:hover{
+            background-color: transparent;
+            color: black;
+        }
+        #new-button a button:hover{
+            border: 1px rgb(255, 115, 0) solid;
+            transition:0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <div class="container">
+            <div id="heading"><i class="fa-solid fa-truck-fast"></i><h1><span>K</span>acha Mart</h1></div>
+            <div id="sub-heading"><p>Welcome you all to easy shopping :)</p></div>
+            <div class="border">
+                <div id="signup">Sign in</div>
+                <div id="sign-in1"><input type="text" placeholder="Email or Mobile Number" id="user_name"></div>
+                <div id="sign-in2"><input type="password" placeholder="Password" id="pswd"></div>
+                <p id="result"></p>
+                <div id="for-pass"><a href="./Forgotpassword.html">Forgot Password?</a></div>
+                <div id="login"><a href="/HTML PART/LOGIN_PAGE/home.html"><button onclick="verification()">Login</button></a></div>
+            </div>
+            <div id="line"></div>
+            <p id="new-user">Are you new user?</p>
+            <div id="new-button"><a href="./signup.html"><button>Create your account</button></a></div>
+        </div>
+    </div>
+
+    <script>
+        function verification(){
+            var database={'Kannan14':'Kanna@1566','Mani14':'Password@1566','Arun12':'Users@786'};
+            var name=document.getElementById("user_name").value;
+            var password=document.getElementById("pswd").value;
+            var key_array=Object.keys(database);
+            var flag="kannan";
+            for(var i=0;i<key_array.length;i++){
+                if(key_array[i]==name){
+                    if(database[key_array[i]]==password){
+                        flag="surya";
+                    }
+                }
+            }
+        if(flag=="surya"){
+            alert('valid')
+        }
+        else{
+            window.location.href="../password.html"
+        }
+    }
+    </script>
+</body>
+</html>
